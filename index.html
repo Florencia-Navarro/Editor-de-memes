@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Generador de memes</title>
+</head>
+<body>
+
+    <!------------------------------ HEADER ------------------------------>
+
+  <header>
+    <h1 class="main-title">Generador de Memes</h1>
+    <nav class="navbar">
+        <ul class="navbar__list">
+            <li class="navbar__element">
+                <button type="button" class="navbar__btn">Imagen</button>
+            </li>
+            <li class="navbar__element">
+                <button type="button" class="navbar__btn">Texto</button>
+            </li>
+            <li class="navbar__element">
+                <button type="button" class="navbar__btn">Modo oscuro</button>
+            </li>
+        </ul>
+    </nav>
+  </header>
+
+  <!------------------------------- MAIN ------------------------------------->
+
+  <main>
+    <article class="meme">
+        <section class="meme__header">
+            <p class="meme__top-tex">TOP TEXT</p>
+        </section>
+        <section class="meme__img">
+        </section>
+        <section class="meme__footer">
+            <p class="meme__botton-tex">BOTTOM TEXT</p>
+        </section>
+    </article>
+    <button type="button" class="download-meme">DESCARGAR MEME</button>
+  </main>
+
+  <!--------------------------- IMAGE SETTINGS --------------------------------->
+
+  <aside class="settings hidden">
+    <h3 class="img-settings__title"></h3>
+
+    <!-- URL -->
+
+    <fieldset class="url">
+        <label for="url" class="url__title">URL</label>
+        <input type="text" name="url" id="url" class="url__input">
+    </fieldset>
+
+    <!-- FONDO -->
+
+    <fieldset class="back-setting">
+        <p>FONDO</p>
+        <ul>
+            <li>
+                <input type="color" name="" id="">
+                <label for="">#FFFFFF</label>
+            </li>
+            <li>
+                <select name="" id="">
+                    <option value="unset">Ninguno</option>
+                    <option value="lighten">Aclarar</option>
+                    <option value="darken">Oscurecer</option>
+                    <option value="difference">Diferencia</option>
+                    <option value="luminosity">Luminosidad</option>
+                    <option value="multiply">Multiplicar</option>
+                </select>
+            </li>
+        </ul>
+
+    </fieldset>
+
+    <!-- FILTROS -->
+
+    <fielset class="filters-container">
+        <ul>
+            <li>
+                <label for="">BRILLO</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">OPACIDAD</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">CONTRASTE</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">DESENFOQUE</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">ESCALA DE GRISES</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">SEPIA</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">HUE</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">SATURADO</label>
+                <input type="range" name="" id="">
+            </li>
+            <li>
+                <label for="">NEGATIVO</label>
+                <input type="range" name="" id="">
+            </li>
+            
+        </ul>
+    </fielset>
+
+    <!-- RESET BUTTON -->
+
+    <button type="button">Reestablecer filtros</button>
+
+
+  </aside>
+
+  <!---------------------------- TEXT SETTINGS ---------------------------->
+
+  <aside class="settings hidden">
+    <h3>TEXTO</h3>
+
+    <!-- TOP TEXT -->
+
+    <fieldset>
+        <legend>SUPERIOR</legend>
+        
+        <ul>
+            <li>
+                <input type="text" name="" id="">
+            </li>
+            <li>
+                <input type="checkbox" name="" id="">
+                <label for="">Sin texto superior</label>
+            </li>
+        </ul>
+
+    </fieldset>
+        
+    <!-- BOTTOM TEXT -->
+
+    <fieldset>
+        <legend>INFERIOR</legend>
+
+        <ul>
+            <li>
+                <input type="text" name="" id="">
+            </li>
+            <li>
+                <input type="checkbox" name="" id="">
+                <label for="">Sin texto inferior</label>
+            </li>
+        </ul>
+
+    </fieldset>
+
+    <!-- FONT -->
+
+    <fieldset>
+        <legend>FUENTE</legend>
+        <section>
+            <select name="" id="">
+                <option value="">Arial</option>
+                <option value="">Arial Black</option>
+                <option value="">American Typewriter</option>
+                <option value="">Andale Mono</option>
+                <option value="">Comic Sans Ms</option>
+                <option value="">Helvetica</option>
+                <option value="">Impact</option>
+                <option value="">Verdana</option>
+                <option value="">Times New Roman</option>
+            </select>
+        </section>
+        <section>
+            <input type="number" name="" id="">
+            <ul>
+                <li>
+                    <button>I</button>
+                </li>
+                <li>
+                    <button>C</button>
+                </li>
+                <li>
+                    <button>D</button>
+                </li>
+                
+            </ul>
+        </section>
+    </fieldset>
+
+    <!-- COLOR Y FONDO -->
+
+    <section>
+        <section>
+            <fieldset>
+                <legend>COLOR</legend>
+                <input type="color" name="" id="">
+                <label for="">#000000</label>
+            </fieldset>
+            <fieldset>
+                <legend>FONDO</legend>
+                <input type="color">
+                <label for="">#FFFFFF</label>
+            </fieldset>
+                    
+        </section>
+        <section>
+                <input type="checkbox" name="" id="">
+                <label for="">Fondo transparente</label>
+        </section>
+    </section>
+
+    <!-- CONTORNO -->
+
+    <section>
+        <button>Ninguno</button>
+        <button>Claro</button>
+        <button>Oscuro</button>
+    </section>
+
+    <!-- ESPACIADO -->
+
+    <fieldset>
+        <legend>ESPACIADO</legend>
+        <input type="number" name="" id="">
+    </fieldset>
+
+    <!-- INTERLINEADO -->
+
+    <fieldset>
+        <legend>INTERLINEADO</legend>
+        <select name="" id="">
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+        </select>
+    </fieldset>
+    
+  </aside>
+
+    
+
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
