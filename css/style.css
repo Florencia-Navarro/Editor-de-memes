@@ -2,11 +2,188 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
-
-
-
+/* ---------------------------------------------------- */
+.bor-no{
+    border: none;
+}
+.ls-no{
+    list-style: none;
+}
+.fw-800{
+    font-weight: 800;
+}
 .hidden{
     display: none;
 }
+
+/* --------------------------------------------------- */
+
+body{
+    background-color: #30343f;
+}
+/* ------------------------HEADER------------------------------- */
+
+
+header{
+    background-color: #191e2b;
+    text-align: center;
+
+}
+.main-title{
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+.navbar__list{
+    display: flex;
+    justify-content: center;
+}
+.navbar__element{
+    
+    margin: 15px;
+}
+.navbar__element i{
+    color: white;
+}
+.navbar__btn{
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+ }
+
+/* -------------------------MAIN--------------------------- */
+
+main{
+    background-color: #30343f;
+    height: 100vh;
+}
+.meme{
+    width: 90%;
+    margin: 0 auto;
+    background-color: black;
+}
+.meme__tex{
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.meme__img{
+    height: 350px;
+}
+.download-btn{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(3, 66, 3);
+    border: 1px solid rgb(2, 27, 2);
+}
+
+/* ---------------------IMAGE SETTINGS----------------------------- */
+
+
+
+.settings{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #191e2b;
+}
+.btn-close{
+    background: none;
+    border: none;
+    color: white;
+   
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+.img-settings__title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* ----URL---- */
+
+.url-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    gap: 5px;
+}
+
+/* ----BACKGROUND---- */
+
+.back-setting{
+    margin: 10px 10px;
+}
+.back-setting__list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.back-setting__color{
+    width: 48%;
+    background-color: #30343f;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    gap: 5px;
+    
+}
+input[type="color"] {
+     width: 30px;
+     height: 30px;
+     border: 0;
+     border-radius: 50%;
+     padding: 0;
+     overflow: hidden;
+}
+ input[type="color"]::-webkit-color-swatch-wrapper {
+     padding: 0;
+ }
+ input[type="color"]::-webkit-color-swatch {
+     border: none;
+ }
+ .back-setting__select{
+     background-color: #30343f;
+     width: 48%;
+     border-radius: 3px;
+     
+ }
+ .back-setting__select select{
+     background: none;
+     color: white;
+     width: 100%;
+     margin: 10px 0;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+ }
+input{
+    background-color: #30343f;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+}
+
+/* ----FILTERS---- */
+
+.filters-container{
+    margin-left: 10px;
+}
+
+
+

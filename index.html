@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Generador de memes</title>
 </head>
@@ -11,17 +12,20 @@
 
     <!------------------------------ HEADER ------------------------------>
 
-  <header>
+  <header class="hidden">
     <h1 class="main-title">Generador de Memes</h1>
     <nav class="navbar">
         <ul class="navbar__list">
-            <li class="navbar__element">
+            <li class="navbar__element ls-no">
+                <i class="fa-regular fa-file-image"></i>
                 <button type="button" class="navbar__btn">Imagen</button>
             </li>
-            <li class="navbar__element">
+            <li class="navbar__element ls-no">
+                <i class="fa-regular fa-a"></i>
                 <button type="button" class="navbar__btn">Texto</button>
             </li>
-            <li class="navbar__element">
+            <li class="navbar__element ls-no">
+                <i class="fa-solid fa-lightbulb"></i>
                 <button type="button" class="navbar__btn">Modo oscuro</button>
             </li>
         </ul>
@@ -30,43 +34,47 @@
 
   <!------------------------------- MAIN ------------------------------------->
 
-  <main>
+  <main class="hidden">
     <article class="meme">
-        <section class="meme__header">
+        <section class="meme__tex">
             <p class="meme__top-tex">TOP TEXT</p>
         </section>
         <section class="meme__img">
         </section>
-        <section class="meme__footer">
+        <section class="meme__tex">
             <p class="meme__botton-tex">BOTTOM TEXT</p>
         </section>
     </article>
-    <button type="button" class="download-meme">DESCARGAR MEME</button>
+    <button type="button" class="download-btn">
+        <i class="fas fa-download button-icon-text"></i> Descargar meme</button>
   </main>
 
   <!--------------------------- IMAGE SETTINGS --------------------------------->
 
-  <aside class="settings hidden">
-    <h3 class="img-settings__title"></h3>
+  <aside class="settings ">
+    <button class="btn-close">
+        <i class="fas fa-times"></i>
+    </button>
+    <h3 class="img-settings__title">IMAGEN</h3>
 
     <!-- URL -->
 
-    <fieldset class="url">
-        <label for="url" class="url__title">URL</label>
+    <fieldset class="url-container bor-no">
+        <label for="url" class="url__title fw-800">URL</label>
         <input type="text" name="url" id="url" class="url__input">
     </fieldset>
 
     <!-- FONDO -->
 
-    <fieldset class="back-setting">
-        <p>FONDO</p>
-        <ul>
-            <li>
+    <fieldset class="back-setting bor-no">
+        <p class="fw-800">FONDO</p>
+        <ul class="back-setting__list">
+            <li class="back-setting__color ls-no">
                 <input type="color" name="" id="">
                 <label for="">#FFFFFF</label>
             </li>
-            <li>
-                <select name="" id="">
+            <li class="back-setting__select ls-no">
+                <select name="" id="" class="bor-no">
                     <option value="unset">Ninguno</option>
                     <option value="lighten">Aclarar</option>
                     <option value="darken">Oscurecer</option>
@@ -82,10 +90,11 @@
     <!-- FILTROS -->
 
     <fielset class="filters-container">
+        <legend class="fw-800">FILTROS</legend>
         <ul>
             <li>
                 <label for="">BRILLO</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             <li>
                 <label for="">OPACIDAD</label>
