@@ -26,7 +26,8 @@
             </li>
             <li class="navbar__element ls-no">
                 <i class="fa-solid fa-lightbulb"></i>
-                <button type="button" class="navbar__btn">Modo oscuro</button>
+                <button type="button" class="dark-theme__btn">Modo oscuro</button>
+                <button type="button" class="light-theme__btn hidden">Modo claro</button>
             </li>
         </ul>
     </nav>
@@ -51,15 +52,15 @@
 
   <!--------------------------- IMAGE SETTINGS --------------------------------->
 
-  <aside class="settings ">
+  <aside class="settings hidden">
     <button class="btn-close">
         <i class="fas fa-times"></i>
     </button>
-    <h3 class="img-settings__title">IMAGEN</h3>
+    <h3 class="settings__title">IMAGEN</h3>
 
     <!-- URL -->
 
-    <fieldset class="url-container bor-no">
+    <fieldset class="url-container bor-no ml-10">
         <label for="url" class="url__title fw-800">URL</label>
         <input type="text" name="url" id="url" class="url__input">
     </fieldset>
@@ -89,44 +90,44 @@
 
     <!-- FILTROS -->
 
-    <fielset class="filters-container">
-        <legend class="fw-800">FILTROS</legend>
-        <ul>
+    <fielset class="filters-container ">
+        <legend class="filters-container__title fw-800" >FILTROS</legend>
+        <ul class="filters-container__list">
             <li>
                 <label for="">BRILLO</label>
-                <input type="range" name="" id="" >
+                <input type="range" name="" id=""  >
             </li>
             <li>
                 <label for="">OPACIDAD</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             <li>
                 <label for="">CONTRASTE</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id=""  >
             </li>
             <li>
                 <label for="">DESENFOQUE</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             <li>
                 <label for="">ESCALA DE GRISES</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             <li>
                 <label for="">SEPIA</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             <li>
                 <label for="">HUE</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             <li>
                 <label for="">SATURADO</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             <li>
                 <label for="">NEGATIVO</label>
-                <input type="range" name="" id="">
+                <input type="range" name="" id="" >
             </li>
             
         </ul>
@@ -134,26 +135,29 @@
 
     <!-- RESET BUTTON -->
 
-    <button type="button">Reestablecer filtros</button>
+    <button type="button" class="reset-btn">Reestablecer filtros</button>
 
 
   </aside>
 
   <!---------------------------- TEXT SETTINGS ---------------------------->
 
-  <aside class="settings hidden">
-    <h3>TEXTO</h3>
+  <aside class="settings ">
+    <button class="btn-close">
+        <i class="fas fa-times"></i>
+    </button>
+    <h3 class="settings__title">TEXTO</h3>
 
     <!-- TOP TEXT -->
 
-    <fieldset>
-        <legend>SUPERIOR</legend>
+    <fieldset class="setting__text bor-no">
+        <legend class="ml-10">SUPERIOR</legend>
         
         <ul>
-            <li>
-                <input type="text" name="" id="">
+            <li class="ls-no">
+                <input type="text" name="" id="" class="meme-text">
             </li>
-            <li>
+            <li class="ls-no">
                 <input type="checkbox" name="" id="">
                 <label for="">Sin texto superior</label>
             </li>
@@ -163,14 +167,14 @@
         
     <!-- BOTTOM TEXT -->
 
-    <fieldset>
-        <legend>INFERIOR</legend>
+    <fieldset class="setting__text bor-no">
+        <legend class="ml-10">INFERIOR</legend>
 
         <ul>
-            <li>
-                <input type="text" name="" id="">
+            <li class="ls-no">
+                <input type="text" name="" id="" class="meme-text">
             </li>
-            <li>
+            <li class="ls-no">
                 <input type="checkbox" name="" id="">
                 <label for="">Sin texto inferior</label>
             </li>
@@ -180,10 +184,10 @@
 
     <!-- FONT -->
 
-    <fieldset>
+    <fieldset class="font__container bor-no ml-10">
         <legend>FUENTE</legend>
         <section>
-            <select name="" id="">
+            <select name="" id="" class="font__select">
                 <option value="">Arial</option>
                 <option value="">Arial Black</option>
                 <option value="">American Typewriter</option>
@@ -195,33 +199,39 @@
                 <option value="">Times New Roman</option>
             </select>
         </section>
-        <section>
+        <section class="font__sizeAling">
             <input type="number" name="" id="">
-            <ul>
-                <li>
-                    <button>I</button>
+            <ul class="font__aling">
+                <li class="ls-no">
+                    <button>
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
                 </li>
-                <li>
-                    <button>C</button>
+                <li class="ls-no">
+                    <button>
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
                 </li>
-                <li>
-                    <button>D</button>
+                <li class="ls-no">
+                    <button>
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
                 </li>
                 
             </ul>
         </section>
     </fieldset>
 
-    <!-- COLOR Y FONDO -->
+    <!-- COLOR & BACKGROUND -->
 
-    <section>
-        <section>
-            <fieldset>
+    <section class="text-color__container">
+        <section class="text__color-back">
+            <fieldset  class="bor-no">
                 <legend>COLOR</legend>
                 <input type="color" name="" id="">
                 <label for="">#000000</label>
             </fieldset>
-            <fieldset>
+            <fieldset class="bor-no">
                 <legend>FONDO</legend>
                 <input type="color">
                 <label for="">#FFFFFF</label>
@@ -244,14 +254,14 @@
 
     <!-- ESPACIADO -->
 
-    <fieldset>
+    <fieldset class="bor-no">
         <legend>ESPACIADO</legend>
         <input type="number" name="" id="">
     </fieldset>
 
     <!-- INTERLINEADO -->
 
-    <fieldset>
+    <fieldset class="bor-no">
         <legend>INTERLINEADO</legend>
         <select name="" id="">
             <option value="0.8">0.8</option>
