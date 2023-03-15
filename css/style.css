@@ -18,7 +18,24 @@
 .ml-10{
     margin-left: 10px;
 }
-
+input{
+    background-color: #30343f;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    color: white;   
+}
+select{
+    background: none;
+    background-color: #30343f;
+    color: white;
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
 .hidden{
     display: none;
 }
@@ -170,22 +187,6 @@ input[type="color"] {
      border-radius: 3px;
      
  }
-.back-setting__select  select{
-     background: none;
-     color: white;
-     width: 100%;
-     margin: 10px 0;
-     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
- } 
-input{
-    background-color: #30343f;
-    border-radius: 3px;
-    border: none;
-    padding: 10px;
-    color: white;
-    
-}
 
 /* ----FILTERS---- */
 .filter-container{
@@ -306,6 +307,7 @@ input[type='range'] {
 }
 
 /* -- COLOR & BACKGROUND -- */
+
 .text-color__container{
     margin: 30px 10px;
 
@@ -315,12 +317,40 @@ input[type='range'] {
     justify-content: space-between;
     margin: 10px 0;
 }
-.text__color-back fieldset{
-    width: 48%;
+.text_color section{
+    width: 45vw;
     background-color: #30343f;
     border-radius: 5px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* -- OUTLINE -- */
+
+.outline__btns button{
+    background-color: #30343f;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
     
 }
-.text__color-back fieldset legend{
-    margin-bottom: 10px;
+
+/* -- SPACING -- */
+
+.spacing{
+   margin: 20px 10px;
 }
+.spacing input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* --INTERLINEADO-- */
+.interlineado{
+    margin: 0 10px;
+}
+
+
+/* ---------------MOVILE--------------- */
+@media (max-width: 767px){}

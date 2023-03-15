@@ -52,7 +52,7 @@
 
   <!--------------------------- IMAGE SETTINGS --------------------------------->
 
-  <aside class="settings hidden">
+  <aside class="settings">
     <button class="btn-close">
         <i class="fas fa-times"></i>
     </button>
@@ -142,7 +142,7 @@
 
   <!---------------------------- TEXT SETTINGS ---------------------------->
 
-  <aside class="settings ">
+  <aside class="settings hidden">
     <button class="btn-close">
         <i class="fas fa-times"></i>
     </button>
@@ -226,15 +226,19 @@
 
     <section class="text-color__container">
         <section class="text__color-back">
-            <fieldset  class="bor-no">
+            <fieldset  class="text_color bor-no">
                 <legend>COLOR</legend>
-                <input type="color" name="" id="">
-                <label for="">#000000</label>
+                <section>
+                    <input type="color" name="" id="">
+                    <label for="">#000000</label>
+                </section>
             </fieldset>
-            <fieldset class="bor-no">
+            <fieldset class="text_color bor-no">
                 <legend>FONDO</legend>
-                <input type="color">
-                <label for="">#FFFFFF</label>
+                <section>
+                    <input type="color">
+                    <label for="">#FFFFFF</label>
+                </section>
             </fieldset>
                     
         </section>
@@ -244,24 +248,24 @@
         </section>
     </section>
 
-    <!-- CONTORNO -->
+    <!-- OUTLINE -->
 
-    <section>
-        <button>Ninguno</button>
-        <button>Claro</button>
-        <button>Oscuro</button>
+    <section class="outline__btns ml-10">
+        <button type="button" id="">Ninguno</button>
+        <button type="button" id="">Claro</button>
+        <button type="button" id="">Oscuro</button>
     </section>
 
-    <!-- ESPACIADO -->
+    <!-- SPACING -->
 
-    <fieldset class="bor-no">
+    <fieldset class="spacing bor-no">
         <legend>ESPACIADO</legend>
         <input type="number" name="" id="">
     </fieldset>
 
     <!-- INTERLINEADO -->
 
-    <fieldset class="bor-no">
+    <fieldset class="interlineado bor-no">
         <legend>INTERLINEADO</legend>
         <select name="" id="">
             <option value="0.8">0.8</option>
