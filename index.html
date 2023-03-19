@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Generador de memes</title>
@@ -11,23 +12,23 @@
 <body>
 
     <!------------------------------ HEADER ------------------------------>
-
-  <header class="hidden">
+<div class="body__container">
+  <header class="">
     <h1 class="main-title">Generador de Memes</h1>
     <nav class="navbar">
         <ul class="navbar__list">
             <li class="navbar__element ls-no">
                 <i class="fa-regular fa-file-image"></i>
-                <button type="button" class="navbar__btn">Imagen</button>
+                <button type="button" class="h-btn">Imagen</button>
             </li>
             <li class="navbar__element ls-no">
                 <i class="fa-regular fa-a"></i>
-                <button type="button" class="navbar__btn">Texto</button>
+                <button type="button" class="h-btn">Texto</button>
             </li>
             <li class="navbar__element ls-no">
-                <i class="fa-solid fa-lightbulb"></i>
-                <button type="button" class="dark-theme__btn">Modo oscuro</button>
-                <button type="button" class="light-theme__btn hidden">Modo claro</button>
+                <i class="fa-solid fa-lightbulb"></i>     
+                <button type="button" class="dark-theme__btn h-btn">Modo oscuro</button>
+                <button type="button" class="light-theme__btn h-btn hidden">Modo claro</button>
             </li>
         </ul>
     </nav>
@@ -35,7 +36,7 @@
 
   <!------------------------------- MAIN ------------------------------------->
 
-  <main class="hidden">
+  <main>
     <article class="meme">
         <section class="meme__tex">
             <p class="meme__top-tex">TOP TEXT</p>
@@ -46,16 +47,43 @@
             <p class="meme__botton-tex">BOTTOM TEXT</p>
         </section>
     </article>
+    <article>
     <button type="button" class="download-btn">
         <i class="fas fa-download button-icon-text"></i> Descargar meme</button>
+    </article>
   </main>
 
+  <!-- -----------------FOOTER---------------------- -->
+
+  <footer>
+    <ul class="footer-links">
+        <li>
+            <a href="https://instagram.com/flor_c_nav?igshid=ZDdkNTZiNTM=" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+        </a>
+        </li>
+        <li>
+            <a href="https://github.com/Florencia-Navarro" target="_blank">
+                <i class="fa-brands fa-github-alt"></i>
+        </a>
+        </li>
+        <li>
+            <a  href="mailto:cecine_flor@hotmail.com"  target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+        </a>
+        </li>
+
+    </ul>
+    <p class="signature">Florencia Navarro </p>
+  </footer>
+</div>
   <!--------------------------- IMAGE SETTINGS --------------------------------->
 
-  <aside class="settings">
-    <button class="btn-close">
-        <i class="fas fa-times"></i>
-    </button>
+  <section class="settings hidden">
+      <button class="btn-close">
+          <i class="fas fa-times"></i>
+      </button>
+    <section class="setting__scroll">
     <h3 class="settings__title">IMAGEN</h3>
 
     <!-- URL -->
@@ -65,10 +93,10 @@
         <input type="text" name="url" id="url" class="url__input">
     </fieldset>
 
-    <!-- FONDO -->
+    <!-- BACKGROUND -->
 
     <fieldset class="back-setting bor-no">
-        <p class="fw-800">FONDO</p>
+        <legend class="fw-800">FONDO</legend>
         <ul class="back-setting__list">
             <li class="back-setting__color ls-no">
                 <input type="color" name="" id="">
@@ -137,15 +165,16 @@
 
     <button type="button" class="reset-btn">Reestablecer filtros</button>
 
-
-  </aside>
+    </section>
+</section>
 
   <!---------------------------- TEXT SETTINGS ---------------------------->
 
-  <aside class="settings hidden">
-    <button class="btn-close">
-        <i class="fas fa-times"></i>
-    </button>
+  <section class="settings">
+      <button class="btn-close">
+          <i class="fas fa-times"></i>
+      </button>
+    <section class="setting__scroll">
     <h3 class="settings__title">TEXTO</h3>
 
     <!-- TOP TEXT -->
@@ -230,7 +259,7 @@
                 <legend>COLOR</legend>
                 <section>
                     <input type="color" name="" id="">
-                    <label for="">#000000</label>
+                    <label for="">#FFFFFF</label>
                 </section>
             </fieldset>
             <fieldset class="text_color bor-no">
@@ -276,8 +305,10 @@
             <option value="2.5">2.5</option>
         </select>
     </fieldset>
-    
-  </aside>
+    </section>
+</section>
+
+   
 
     
 
