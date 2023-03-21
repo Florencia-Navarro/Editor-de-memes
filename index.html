@@ -18,17 +18,29 @@
     <nav class="navbar">
         <ul class="navbar__list">
             <li class="navbar__element ls-no">
-                <i class="fa-regular fa-file-image"></i>
-                <button type="button" class="h-btn">Imagen</button>
+                
+                <button type="button" class="h-btn" id="img-btn">
+                    <i class="fa-regular fa-file-image"></i>
+                    Imagen
+                </button>
             </li>
             <li class="navbar__element ls-no">
-                <i class="fa-regular fa-a"></i>
-                <button type="button" class="h-btn">Texto</button>
+                
+                <button type="button" class="h-btn" id="text-btn">
+                    <i class="fa-regular fa-a"></i>
+                    Texto
+                </button>
             </li>
             <li class="navbar__element ls-no">
-                <i class="fa-solid fa-lightbulb"></i>     
-                <button type="button" class="dark-theme__btn h-btn">Modo oscuro</button>
-                <button type="button" class="light-theme__btn h-btn hidden">Modo claro</button>
+                     
+                <button type="button" class="dark-theme__btn h-btn" id="dark-theme__btn">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Modo oscuro
+                </button>
+                <button type="button" class="light-theme__btn h-btn hidden" id="light-theme__btn">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Modo claro
+                    </button>
             </li>
         </ul>
     </nav>
@@ -38,12 +50,13 @@
 
   <main>
     <article class="meme">
-        <section class="meme__tex">
+        <section class="meme__tex" id="meme__top-text">
             <p class="meme__top-tex">TOP TEXT</p>
         </section>
         <section class="meme__img">
-        </section>
-        <section class="meme__tex">
+<!--             <img src="" alt="meme" class="meme__img-img">
+ -->        </section>
+        <section class="meme__tex" id="meme__bottom-text">
             <p class="meme__botton-tex">BOTTOM TEXT</p>
         </section>
     </article>
@@ -74,13 +87,13 @@
         </li>
 
     </ul>
-    <p class="signature">Florencia Navarro </p>
+    <p class="signature">Florencia Navarro </p> 
   </footer>
 </div>
   <!--------------------------- IMAGE SETTINGS --------------------------------->
 
-  <section class="settings hidden">
-      <button class="btn-close">
+  <section  class="settings hidden" id="img__settings">
+      <button class="btn-close" id="img__settings-close">
           <i class="fas fa-times"></i>
       </button>
     <section class="setting__scroll">
@@ -99,8 +112,9 @@
         <legend class="fw-800">FONDO</legend>
         <ul class="back-setting__list">
             <li class="back-setting__color ls-no">
-                <input type="color" name="" id="">
-                <label for="">#FFFFFF</label>
+                <input type="color" name="color" id="background-color__meme">
+                <label for="color" id="background-color__label">
+                </label>
             </li>
             <li class="back-setting__select ls-no">
                 <select name="" id="" class="bor-no">
@@ -122,20 +136,20 @@
         <legend class="filters-container__title fw-800" >FILTROS</legend>
         <ul class="filters-container__list">
             <li>
-                <label for="">BRILLO</label>
-                <input type="range" name="" id=""  >
+                <label for="brightness">BRILLO</label>
+                <input type="range" name="brightness" id="brightness-filter" min="0" max="1" step="0.1">
             </li>
             <li>
                 <label for="">OPACIDAD</label>
-                <input type="range" name="" id="" >
+                <input type="range" name="opacity" id="opacity-filter" min="0" max="1" step="0.1">
             </li>
             <li>
-                <label for="">CONTRASTE</label>
-                <input type="range" name="" id=""  >
+                <label for="contrast">CONTRASTE</label>
+                <input type="range" name="contrast" id="contrast-filter" min="100" max="1000" step="1"  >
             </li>
             <li>
-                <label for="">DESENFOQUE</label>
-                <input type="range" name="" id="" >
+                <label for="blur">DESENFOQUE</label>
+                <input type="range" name="blur" id="blur-filter" min="0" max="10" step="0.1" >
             </li>
             <li>
                 <label for="">ESCALA DE GRISES</label>
@@ -170,8 +184,8 @@
 
   <!---------------------------- TEXT SETTINGS ---------------------------->
 
-  <section class="settings">
-      <button class="btn-close">
+  <section  class="settings hidden" id="text__settings">
+      <button class="btn-close" id="text__setting-close">
           <i class="fas fa-times"></i>
       </button>
     <section class="setting__scroll">
@@ -184,7 +198,7 @@
         
         <ul>
             <li class="ls-no">
-                <input type="text" name="" id="" class="meme-text">
+                <input type="text" name="top-text" id="top-text" class="meme-text">
             </li>
             <li class="ls-no">
                 <input type="checkbox" name="" id="">
@@ -201,7 +215,7 @@
 
         <ul>
             <li class="ls-no">
-                <input type="text" name="" id="" class="meme-text">
+                <input type="text" name="bottom-text" id="bottom-text" class="meme-text">
             </li>
             <li class="ls-no">
                 <input type="checkbox" name="" id="">
@@ -229,7 +243,7 @@
             </select>
         </section>
         <section class="font__sizeAling">
-            <input type="number" name="" id="">
+            <input type="number" name="number" min="12" id="font-size">
             <ul class="font__aling">
                 <li class="ls-no">
                     <button>
@@ -258,15 +272,15 @@
             <fieldset  class="text_color bor-no">
                 <legend>COLOR</legend>
                 <section>
-                    <input type="color" name="" id="">
-                    <label for="">#FFFFFF</label>
+                    <input type="color" name="color" id="font-color">
+                    <label for="color" id="font-color__label"></label>
                 </section>
             </fieldset>
             <fieldset class="text_color bor-no">
                 <legend>FONDO</legend>
                 <section>
-                    <input type="color">
-                    <label for="">#FFFFFF</label>
+                    <input type="color" name="color" id="background-color__text">
+                    <label for="color" id="background-color__text__label"></label>
                 </section>
             </fieldset>
                     
