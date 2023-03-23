@@ -50,19 +50,19 @@
 
   <main>
     <article class="meme">
-        <section class="meme__tex" id="meme__top-text">
+        <section class="meme__tex__top-cont" id="meme__top-text">
             <p class="meme__top-tex">TOP TEXT</p>
         </section>
         <section class="meme__img">
-<!--             <img src="" alt="meme" class="meme__img-img">
- -->        </section>
-        <section class="meme__tex" id="meme__bottom-text">
+        </section>
+        <section class="meme__tex__bottom-cont" id="meme__bottom-text">
             <p class="meme__botton-tex">BOTTOM TEXT</p>
         </section>
     </article>
     <article>
-    <button type="button" class="download-btn">
-        <i class="fas fa-download button-icon-text"></i> Descargar meme</button>
+        <button type="button" class="download-btn">
+            <i class="fas fa-download button-icon-text"></i> Descargar meme
+        </button>
     </article>
   </main>
 
@@ -73,17 +73,17 @@
         <li>
             <a href="https://instagram.com/flor_c_nav?igshid=ZDdkNTZiNTM=" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
-        </a>
+            </a>
         </li>
         <li>
             <a href="https://github.com/Florencia-Navarro" target="_blank">
                 <i class="fa-brands fa-github-alt"></i>
-        </a>
+            </a>
         </li>
         <li>
             <a  href="mailto:cecine_flor@hotmail.com"  target="_blank">
                 <i class="fa-solid fa-envelope"></i>
-        </a>
+            </a>
         </li>
 
     </ul>
@@ -117,7 +117,7 @@
                 </label>
             </li>
             <li class="back-setting__select ls-no">
-                <select name="" id="" class="bor-no">
+                <select name="back__blend-mode" id="back__blend-mode" class="bor-no">
                     <option value="unset">Ninguno</option>
                     <option value="lighten">Aclarar</option>
                     <option value="darken">Oscurecer</option>
@@ -152,24 +152,24 @@
                 <input type="range" name="blur" id="blur-filter" min="0" max="10" step="0.1" >
             </li>
             <li>
-                <label for="">ESCALA DE GRISES</label>
-                <input type="range" name="" id="" >
+                <label for="grayscale">ESCALA DE GRISES</label>
+                <input type="range" name="grayscale" id="grayscale-filter" min="0" max="100" step="1" >
             </li>
             <li>
-                <label for="">SEPIA</label>
-                <input type="range" name="" id="" >
+                <label for="sepia">SEPIA</label>
+                <input type="range" name="sepia" id="sepia-filter" min="0" max="100" step="1" >
             </li>
             <li>
-                <label for="">HUE</label>
-                <input type="range" name="" id="" >
+                <label for="hue-rotate">HUE</label>
+                <input type="range" name="hue-rotate" id="hue-rotate-filter" min="0" max="359" step="1" >
             </li>
             <li>
-                <label for="">SATURADO</label>
-                <input type="range" name="" id="" >
+                <label for="saturate">SATURADO</label>
+                <input type="range" name="saturate" id="saturate-filter" min="100" max="1000" step="10" >
             </li>
             <li>
-                <label for="">NEGATIVO</label>
-                <input type="range" name="" id="" >
+                <label for="invert">NEGATIVO</label>
+                <input type="range" name="invert" id="invert-filter" min="0" max="1" step="0.1" >
             </li>
             
         </ul>
@@ -179,7 +179,7 @@
 
     <button type="button" class="reset-btn">Reestablecer filtros</button>
 
-    </section>
+  </section>
 </section>
 
   <!---------------------------- TEXT SETTINGS ---------------------------->
@@ -188,7 +188,7 @@
       <button class="btn-close" id="text__setting-close">
           <i class="fas fa-times"></i>
       </button>
-    <section class="setting__scroll">
+  <section class="setting__scroll">
     <h3 class="settings__title">TEXTO</h3>
 
     <!-- TOP TEXT -->
@@ -201,8 +201,8 @@
                 <input type="text" name="top-text" id="top-text" class="meme-text">
             </li>
             <li class="ls-no">
-                <input type="checkbox" name="" id="">
-                <label for="">Sin texto superior</label>
+                <input type="checkbox" name="no-top-text" id="no-top-text">
+                <label for="no-top-text">Sin texto superior</label>
             </li>
         </ul>
 
@@ -218,44 +218,45 @@
                 <input type="text" name="bottom-text" id="bottom-text" class="meme-text">
             </li>
             <li class="ls-no">
-                <input type="checkbox" name="" id="">
-                <label for="">Sin texto inferior</label>
+                <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
+                <label for="no-bottom-text">Sin texto inferior</label>
             </li>
         </ul>
 
     </fieldset>
 
     <!-- FONT -->
+    
 
     <fieldset class="font__container bor-no ml-10">
         <legend>FUENTE</legend>
         <section>
-            <select name="" id="" class="font__select">
-                <option value="">Arial</option>
-                <option value="">Arial Black</option>
-                <option value="">American Typewriter</option>
-                <option value="">Andale Mono</option>
-                <option value="">Comic Sans Ms</option>
-                <option value="">Helvetica</option>
-                <option value="">Impact</option>
-                <option value="">Verdana</option>
-                <option value="">Times New Roman</option>
+            <select name="fonts" id="font__select" class="font__select">
+                <option value="Arial">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="American Typewriter">American Typewriter</option>
+                <option value="Andale Mono">Andale Mono</option>
+                <option value="Comic Sans Ms">Comic Sans Ms</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Impact">Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
             </select>
         </section>
         <section class="font__sizeAling">
             <input type="number" name="number" min="12" id="font-size">
             <ul class="font__aling">
-                <li class="ls-no">
-                    <button>
+                <li class="ls-no" id="aling__left-btn">
+                    <button >
                         <i class="fa-solid fa-align-left"></i>
                     </button>
                 </li>
-                <li class="ls-no">
-                    <button>
+                <li class="ls-no" id="aling__center-btn">
+                    <button id>
                         <i class="fa-solid fa-align-center"></i>
                     </button>
                 </li>
-                <li class="ls-no">
+                <li class="ls-no" id="aling__right-btn">
                     <button>
                         <i class="fa-solid fa-align-right"></i>
                     </button>
@@ -286,31 +287,31 @@
                     
         </section>
         <section>
-                <input type="checkbox" name="" id="">
-                <label for="">Fondo transparente</label>
+                <input type="checkbox" name="background-transparent" id="background-transparent">
+                <label for="background-transparent">Fondo transparente</label>
         </section>
     </section>
 
     <!-- OUTLINE -->
 
     <section class="outline__btns ml-10">
-        <button type="button" id="">Ninguno</button>
-        <button type="button" id="">Claro</button>
-        <button type="button" id="">Oscuro</button>
+        <button type="button" id="border__none">Ninguno</button>
+        <button type="button" id="border__light">Claro</button>
+        <button type="button" id="border__dark">Oscuro</button>
     </section>
 
-    <!-- SPACING -->
+    <!---------- SPACING ---------->
 
     <fieldset class="spacing bor-no">
         <legend>ESPACIADO</legend>
-        <input type="number" name="" id="">
+        <input type="number" name="spacing" id="spacing" min="10" max="50">
     </fieldset>
 
-    <!-- INTERLINEADO -->
+    <!---------- LINE-HEIGHT ---------->
 
-    <fieldset class="interlineado bor-no">
+    <fieldset class="line-height__cont bor-no">
         <legend>INTERLINEADO</legend>
-        <select name="" id="">
+        <select name="line-height" id="line-height">
             <option value="0.8">0.8</option>
             <option value="1">1</option>
             <option value="1.2">1.2</option>

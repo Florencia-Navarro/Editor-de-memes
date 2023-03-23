@@ -23,6 +23,7 @@
 }
 
 /* ---------------------------------------------------- */
+
 .bor-no{
     border: none;
 }
@@ -59,8 +60,8 @@ select{
 .hidden{
     display: none;
 }
-.show{
-    display: block;
+.p-abs{
+    position: absolute;
 }
 .h-btn{
     background: none;
@@ -70,11 +71,9 @@ select{
     font-size: 1rem;
 }
 .h-btn:hover{
-    
-        background-color: var(--button-color-hover);
-        border-radius: 5px;
-        transition: o.5ms;
-    
+    background-color: var(--button-color-hover);
+    border-radius: 5px;
+    transition: o.5ms;
 }
 
 /* --------------------------------------------------- */
@@ -84,6 +83,7 @@ body{
     height: 100vh;
     overflow: hidden;   
 }
+
 /* ------------------------HEADER------------------------------- */
 
 
@@ -112,37 +112,50 @@ header{
     
 /* -------------------------MAIN--------------------------- */
 
-.meme{
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto 10px;
+.meme{    
+    height: 55vh;
+    width: 70vw;
+    max-width: 500px;
+    margin: 0 auto ;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
-.meme__tex{
-    height: 15vh;
+.meme__tex__top-cont, .meme__tex__bottom-cont{
+    height: 10vh;
+    width: 100%;
     background-color: white;
     font-size: 2rem;
     font-weight: bold;
-    padding: 10px;
+    padding: 17px;
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
 }
 .meme__img{
-   /*  width: 90%; */
-    height: 350px;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-/* .meme__img-img{
-   
-    height: 350px;
-    width: 90%;
-  
-} */
+
+/* -----background-transparent classes----- */
+
+.top-text-transparent{
+    background: transparent;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+}
+.bottom-text-transparent{
+    background: transparent;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+}
 .download-btn{
     display: block;
-    margin: 5px auto;
+    margin: 30px auto;
     padding: 10px;
     border-radius: 3px;
     background-color: rgb(7, 146, 7);
@@ -178,8 +191,6 @@ footer ul li i{
 
 /* ---------------------IMAGE SETTINGS----------------------------- */
 
-
-
 .settings{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--font-color-primary);
@@ -187,12 +198,10 @@ footer ul li i{
     overflow-y: scroll;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100vw;    
     height: 100vh;
-   
+    z-index: 1000;
 }
-
-
 .btn-close{
     background: none;
     border: none;
@@ -244,6 +253,7 @@ input[type="color"] {
     border-radius: 50%;
     padding: 0;
     overflow: hidden;
+    cursor: pointer;
 }
  input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
@@ -254,7 +264,7 @@ input[type="color"]::-webkit-color-swatch {
 .back-setting__select{
     background-color: var(--backgroun-secondary);
     width: 48%;
-    border-radius: 3px; 
+    border-radius: 3px;    
 }
 
 
@@ -273,7 +283,6 @@ input[type="color"]::-webkit-color-swatch {
     font-size: 12px;
     padding: 10px 0;
 }
-
 .filters-container__list li label{
     margin-left: 10px;
 }
@@ -281,6 +290,7 @@ input[type='range'] {
     display: block;
     width:100%;
     background: none;
+    cursor: pointer;
 }
 input[type='range']:focus {
     outline: none;
@@ -314,12 +324,15 @@ input[type=range]::-webkit-slider-runnable-track {
 .reset-btn{
     margin: 40px 0 20px 10px;
     padding: 10px;
-    background-color: var(--button-color-hover);
+    background-color: var(--backgroun-secondary);
     color: var(--font-color-primary);
     border: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
 }
-
+.reset-btn:hover{
+    background-color: var(--button-color-hover);
+}
 /* ---------------------------- TEXT SETTINGS ---------------------------- */
 
 .setting__text{
@@ -372,7 +385,7 @@ input[type=range]::-webkit-slider-runnable-track {
     font-size: 1rem; 
 }
 
-/* -- COLOR & BACKGROUND -- */
+/* ---------- COLOR & BACKGROUND ------------ */
 
 .text-color__container{
     margin: 30px 10px;
@@ -390,7 +403,7 @@ input[type=range]::-webkit-slider-runnable-track {
     padding: 5px;
 }
 
-/* -- OUTLINE -- */
+/* ----------- OUTLINE ------------ */
 
 .outline__btns button{
     background-color: var(--backgroun-secondary);
@@ -403,7 +416,16 @@ input[type=range]::-webkit-slider-runnable-track {
     background-color: var(--button-color-hover);
 }
 
-/* -- SPACING -- */
+/* -----Outline-btns-classes-----*/
+
+.stroke-light {   
+    -webkit-text-stroke: 2px #eeeeee;
+    }
+.stroke-dark{
+    -webkit-text-stroke: 2px black;
+}
+
+/* ------------ SPACING ----------- */
 
 .spacing{
    margin: 20px 10px;
@@ -413,22 +435,22 @@ input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
 }
 
-/* --INTERLINEADO-- */
-.interlineado{
+/* -------------LINE-HEIGHT------------- */
+.line-height__cont{
     margin: 0 10px;
 }
-
 
 /* ------------------------------ */
 
 
 @media (min-width: 700px){
-    /* .navbar__element:hover{
-        background-color: var(--backgroun-secondary);
-        border-radius: 5px;
-        transition: o.5ms;
-    } */
-    
+    .meme{
+        max-width: 750px;
+        height: 750px;
+    }
+    .meme__tex__top-cont, .meme__tex__bottom-cont{
+        height: 15%;
+    }
     ::-webkit-scrollbar{
         width: 5px;
     }
@@ -446,7 +468,6 @@ input[type=range]::-webkit-slider-runnable-track {
     .btn-close{
         display: none;
     }
-    
     .font__select{
         width: 220px;
     }
@@ -461,10 +482,8 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     .outline__btns button {
         width: 30%;
-        padding-left: 10px;
-        
+        padding-left: 10px;   
     }
-    
 }
 
 
