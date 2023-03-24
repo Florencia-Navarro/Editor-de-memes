@@ -1,6 +1,7 @@
 :root {
     --background-primary: #191e2b;
     --backgroun-secondary: #30343f;
+    --backgroun-tertiary: #2c2f35;
     --font-color-primary: white;
     --background-color-range-primary: white;
     --background-color-range-secondary:#77797e;
@@ -8,13 +9,14 @@
     --input-color-hover: #51545c;
 }
 [data-theme="ligth-theme"] {
-    --background-primary: #e0e0e0;
-    --backgroun-secondary: #eeeeee;
+    --background-primary: #aaa9a9;
+    --backgroun-secondary: #f8f8fc;
+    --backgroun-tertiary: #e4e4f5;
     --font-color-primary: black;
     --background-color-range-primary: #191e2b;
     --background-color-range-secondary:#30343f;
-    --button-color-hover: #51545c;
-    --input-color-hover: #51545c;
+    --button-color-hover: #868992;
+    --input-color-hover: #868992;
 }
 *{
     margin: 0;
@@ -112,11 +114,14 @@ header{
     
 /* -------------------------MAIN--------------------------- */
 
+main{
+    display: flex;
+    justify-content: center;
+}
 .meme{    
     height: 55vh;
     width: 70vw;
     max-width: 500px;
-    margin: 0 auto ;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -161,6 +166,15 @@ header{
     background-color: rgb(7, 146, 7);
     border: none;
     color: white;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.download-btn:hover{
+    background-color: rgb(55, 236, 55);
+}
+.download-btn:active {
+    transform: scale(0.98);
+    background-color: rgb(3, 44, 3);
 }
 
 /* --------------------FOOTER-------------------- */
@@ -188,13 +202,12 @@ footer ul li i{
     color: var(--font-color-primary);
     font-size: 0.8rem;
 }
-
-/* ---------------------IMAGE SETTINGS----------------------------- */
+/* ----------SETTINGS---------- */
 
 .settings{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--font-color-primary);
-    background-color: #252935;
+    background-color: var(--backgroun-tertiary);
     overflow-y: scroll;
     position: fixed;
     top: 0;
@@ -216,6 +229,7 @@ footer ul li i{
     text-align: center;
     padding: 30px 0;
 }
+/* ---------------------IMAGE SETTINGS----------------------------- */
 
 /* ----URL---- */
 
@@ -445,8 +459,8 @@ input[type=range]::-webkit-slider-runnable-track {
 
 @media (min-width: 700px){
     .meme{
-        max-width: 750px;
-        height: 750px;
+        max-width: 600px;
+        height: 600px;
     }
     .meme__tex__top-cont, .meme__tex__bottom-cont{
         height: 15%;

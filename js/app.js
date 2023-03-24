@@ -33,16 +33,18 @@ window.addEventListener("load", initializeProject)
 
 
 $("#dark-theme__btn").addEventListener("click", () => {
-    if($("body").getAttribute("data-theme")){
-        $("#dark-theme__btn").classList.remove("hidden")
-        $("#light-theme__btn").classList.add("hidden")
-        $("body").removeAttribute("data-theme", "ligth-theme")
-    } else {
-        $("#dark-theme__btn").classList.add("hidden")
-        $("#light-theme__btn").classList.remove("hidden")
-        $("body").setAttribute("data-theme", "ligth-theme")
+    $("#dark-theme__btn").classList.add("hidden")
+    $("#light-theme__btn").classList.remove("hidden")
+    $("body").setAttribute("data-theme", "ligth-theme")
     }
-})
+)
+
+$("#light-theme__btn").addEventListener("click", () => {
+    $("#dark-theme__btn").classList.remove("hidden")
+    $("#light-theme__btn").classList.add("hidden")
+    $("body").removeAttribute("data-theme", "ligth-theme")
+    }
+)
 
 /* ----------OPEN AND CLOSE SETTINGS MENU---------- */
 
@@ -119,7 +121,7 @@ $("#contrast-filter").addEventListener("input", memeFilters)
 
 /* ----------BLUR---------- */
 
-$("#contrast-filter").addEventListener("input", memeFilters)
+$("#blur-filter").addEventListener("input", memeFilters)
 
 /* ----------GRAYSCALE---------- */
 
@@ -322,4 +324,14 @@ $("#line-height").addEventListener("input", () => {
     $(".meme__tex__bottom-cont").style.lineHeight = $("#line-height").value
     }
 )
+
+/* -----------DOWNLOAD MEME---------- */
+
+const downloadMeme = () => {
+    domtoimage.toBlob($('#meme-container')).then((blob) => {
+        saveAs(blob, 'mi-meme.png')
+      })
+}
+
+$("#download-btn").addEventListener('click', downloadMeme)
 
