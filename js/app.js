@@ -328,7 +328,7 @@ $("#line-height").addEventListener("input", () => {
 /* -----------DOWNLOAD MEME---------- */
 
 const downloadMeme = () => {
-    domtoimage.toBlob($('#meme-container')).then((blob) => {
+    domtoimage.toBlob($('#meme')).then((blob) => {
         saveAs(blob, 'mi-meme.png')
       })
 }
